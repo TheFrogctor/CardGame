@@ -1,16 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
-[CreateAssetMenu(menuName = "CardGame/Card")]
-public class Card : ScriptableObject
+public abstract class CardData : ScriptableObject
 {
-    public string CardName;
-    public string Domain;
-    public int Cost;
     public string CardType;
-    public int Attack;
-    public int Defense;
-    public string Ability;
+    public string CardName;
     public Sprite cardart;
+    public int Cost;
+    public string Ability;
 }

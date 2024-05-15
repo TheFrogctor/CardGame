@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab05f09a1747ac94291ac185882f90db, type: 3}
+  m_Name: NecromyContortoise
+  m_EditorClassIdentifier: 
+  CardType: Familiar
+  CardName: NecromyContortoise
+  cardart: {fileID: 21300000, guid: 20907fd148fa14f45bea0438cacc351f, type: 3}
+  Cost: 3
+  Ability: 'On your turn: Roll a D20. If the number is odd, then your opponent is
+    now poisoned. If this card dies, send it to your deck instead.'
+  Domain: UnderGroundCave
+  Attack: 2
+  Defense: 10
+  description: A myth says that you can tell how old one is by counting the mushrooms
+    on it.
+  OnDestroy:
+    m_PersistentCalls:
+      m_Calls: []
+  OnPlay:
+    m_PersistentCalls:
+      m_Calls: []
+  ActivateAbility:
+    m_PersistentCalls:
+      m_Calls: []
