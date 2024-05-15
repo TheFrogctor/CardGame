@@ -4,9 +4,24 @@ using UnityEngine;
 
 public class CardFunctions : MonoBehaviour
 {
-    public void PoisonCard()
+    public void SendToDiscard()
     {
-        //does nothing rn
+        //I think you'll get this one
+    }
+
+    public void SendToHand()
+    {
+        //This one too
+    }
+
+    public void ReturnToDeck()
+    {
+        //This one as well
+    }
+
+    public void ShuffleDeck()
+    {
+        //I think I can stop now
     }
 
     public void ChooseTargets()
@@ -18,6 +33,10 @@ public class CardFunctions : MonoBehaviour
     {
         //For hurt and death effects, will set the target to the attacker
     }
+    public void PoisonCard()
+    {
+        //does nothing rn
+    }
 
-    
+
 }
