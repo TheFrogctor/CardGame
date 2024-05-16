@@ -2,38 +2,51 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CardFunctions : MonoBehaviour
+[CreateAssetMenu(menuName = "CardGame/CardFunctions")]
+public class CardFunctions : ScriptableObject
 {
-    public void SendToDiscard()
+    public static void GoFirst()
+    {
+        Debug.Log("this should be first");
+    }
+    public static void GoSecond()
+    {
+        Debug.Log("this should be second");
+    }
+    public static void GoThird()
+    {
+        Debug.Log("this should be third");
+    }
+    public static void SendToDiscard()
     {
         //I think you'll get this one
     }
 
-    public void SendToHand()
+    public static void SendToHand()
     {
         //This one too
     }
 
-    public void ReturnToDeck()
+    public static void ReturnToDeck()
     {
         //This one as well
     }
 
-    public void ShuffleDeck()
+    public static void ShuffleDeck()
     {
         //I think I can stop now
     }
 
-    public void ChooseTargets()
+    public static void ChooseTargets()
     {
         //This one will be used to tell the game which targets to ue an ability on
     }
 
-    public void TargetAttacker()
+    public static void TargetAttacker()
     {
         //For hurt and death effects, will set the target to the attacker
     }
-    public void PoisonCard()
+    public static void PoisonCard()
     {
         //does nothing rn
     }

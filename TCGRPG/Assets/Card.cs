@@ -10,4 +10,5 @@ public abstract class CardData : ScriptableObject
     public Sprite cardart;
     public int Cost;
     public string Ability;
+    public CardFunctions functions;
 }

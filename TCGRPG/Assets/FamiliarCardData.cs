@@ -11,7 +11,7 @@ public class FamiliarCardData : CardData
     public int Defense;
     public string description;
 
-    public UnityEvent OnDestroy;
-    public UnityEvent OnPlay;
-    public UnityEvent ActivateAbility;
+    public UnityEvent<GameObject> OnDestroy;
+    public UnityEvent<GameObject> OnPlay;
+    public UnityEvent<GameObject> ActivateAbility;
 }
