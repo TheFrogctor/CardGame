@@ -6,7 +6,7 @@ public class PlayerMovementsScript : MonoBehaviour
 {
 
     private Vector2 moveInput;
-    private Rigidbody2D rb;
+    private Rigidbody rb;
 
     private Vector2 targetMovement;
     private Vector2 currentMovement;
@@ -16,6 +16,13 @@ public class PlayerMovementsScript : MonoBehaviour
     [Header("Movement Variables")]
     public float moveSpeed;
     public float accelleration;
+
+    void Awake()
+    {
+        rb = transform.GetComponent<Rigidbody>();
+    }
+
+
     void Update()
     {
         GetInput();
