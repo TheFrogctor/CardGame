@@ -2,8 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(menuName = "CardGame/CardFunctions")]
-public class CardFunctions : ScriptableObject
+[CreateAssetMenu(menuName = "CardFunctions/HandFunctions")]
+public class HandFunctions : ScriptableObject
 {
     public static void GoFirst()
     {
@@ -41,15 +41,32 @@ public class CardFunctions : ScriptableObject
     {
         //This one will be used to tell the game which targets to ue an ability on
     }
+}
+
+[CreateAssetMenu(menuName = "CardFunctions/TargetingMechanisms")]
+public class TargetingMechanisms: ScriptableObject
+{
+    public static void SelectTarget()
+    {
+        //For hurt and death effects, will set the target to the attacker
+    }
+
+    public static void TargetAllEnemies()
+    {
+        //For hurt and death effects, will set the target to the attacker
+    }
 
     public static void TargetAttacker()
     {
         //For hurt and death effects, will set the target to the attacker
     }
+}
+
+[CreateAssetMenu(menuName = "CardFunctions/ApplyStatusEffects")]
+public class StatusEffects: ScriptableObject
+{
     public static void PoisonCard()
     {
         //does nothing rn
     }
-
-
 }

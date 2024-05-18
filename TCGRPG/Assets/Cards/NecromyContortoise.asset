@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ab05f09a1747ac94291ac185882f90db, type: 3}
-  m_Name: necronomy
+  m_Name: NecromyContortoise
   m_EditorClassIdentifier: 
   CardType: Familiar
   CardName: NecromyContortoise
@@ -18,7 +18,6 @@ MonoBehaviour:
   Cost: 3
   Ability: 'On your turn: Roll a D20. If the number is odd, then your opponent is
     now poisoned. If this card dies, send it to your deck instead.'
-  functions: {fileID: 0}
   Domain: UnderGroundCave
   Attack: 2
   Defense: 10
