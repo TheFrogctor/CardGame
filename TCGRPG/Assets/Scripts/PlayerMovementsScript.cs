@@ -5,11 +5,11 @@ using UnityEngine;
 public class PlayerMovementsScript : MonoBehaviour
 {
 
-    private Vector2 moveInput;
+    private Vector3 moveInput;
     private Rigidbody rb;
 
-    private Vector2 targetMovement;
-    private Vector2 currentMovement;
+    private Vector3 targetMovement;
+    private Vector3 currentMovement;
 
     // public Collider3D playerCollider;
 
@@ -31,7 +31,7 @@ public class PlayerMovementsScript : MonoBehaviour
     private void GetInput()
     {
         moveInput.x = Input.GetAxisRaw("Horizontal");
-        moveInput.y = Input.GetAxisRaw("Vertical");
+        moveInput.z = Input.GetAxisRaw("Vertical");
 
         moveInput.Normalize();
 
@@ -46,12 +46,12 @@ public class PlayerMovementsScript : MonoBehaviour
     private void Move()
     {
 
-        currentMovement = Vector2.MoveTowards(currentMovement, targetMovement, accelleration * Time.fixedDeltaTime);
+        currentMovement = Vector3.MoveTowards(currentMovement, targetMovement, accelleration * Time.fixedDeltaTime);
 
         rb.velocity = currentMovement;
     }
 
-    public void Shove(Vector2 force)
+    public void Shove(Vector3 force)
     {
         currentMovement += force;
     }
