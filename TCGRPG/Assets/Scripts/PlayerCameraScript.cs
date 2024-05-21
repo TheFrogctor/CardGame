@@ -16,8 +16,8 @@ public class PlayerCameraScript : MonoBehaviour
         mouseMovement = new Vector2(Input.GetAxis("Mouse X"), Input.GetAxis("Mouse Y"));
 
         var rot = transform.rotation.eulerAngles;
-        
-    //X spins vertically, y horizontally, and z tilts the camera
+
+        //X spins vertically, Y horizontally, and Z tilts the camera
         rot.x -=mouseMovement.y;
         rot.y +=mouseMovement.x;
 
