@@ -215,7 +215,6 @@ GameObject:
   - component: {fileID: 221751806}
   - component: {fileID: 221751809}
   - component: {fileID: 221751805}
-  - component: {fileID: 221751811}
   - component: {fileID: 221751810}
   m_Layer: 0
   m_Name: PlayerModel
@@ -305,8 +304,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 221751804}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.000000011175871, y: -0, z: -0.000000011175871, w: 1}
-  m_LocalPosition: {x: -0.000034332275, y: 1, z: 0}
+  m_LocalRotation: {x: -0.000000007450581, y: -0, z: -0.000000011175871, w: 1}
+  m_LocalPosition: {x: -0.000031471252, y: 1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -346,26 +345,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 221751804}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9bbd84375a9a8de42ae4cfa764254b58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 20
   accelleration: 100
---- !u!114 &221751811
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 221751804}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4ff9e3048362735458687e3df9749e9b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mouseMovement: {x: 0, y: 0}
 --- !u!1 &247116196
 GameObject:
   m_ObjectHideFlags: 3
@@ -753,8 +739,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 781164869}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.07503747, y: -0.81818026, z: 0.10975422, w: 0.5593786}
-  m_LocalPosition: {x: 5.320637, y: 2.5599897, z: 2.0723293}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1, z: -3.57}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -786,7 +772,7 @@ Camera:
   m_ShutterSpeed: 0.005
   m_Aperture: 16
   m_FocusDistance: 10
-  m_FocalLength: 50
+  m_FocalLength: 25.734083
   m_BladeCount: 5
   m_Curvature: {x: 2, y: 11}
   m_BarrelClipping: 0.25
@@ -831,7 +817,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ff9e3048362735458687e3df9749e9b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mouseMovement: {x: 0, y: 0}
+  player: {fileID: 221751804}
+  followDist: 5
+  viewHeight: 1
 --- !u!1 &797035781
 GameObject:
   m_ObjectHideFlags: 3
@@ -1357,6 +1345,6 @@ SceneRoots:
   m_Roots:
   - {fileID: 1987582427}
   - {fileID: 2016335923}
-  - {fileID: 781164870}
   - {fileID: 221751808}
+  - {fileID: 781164870}
   - {fileID: 279776977}

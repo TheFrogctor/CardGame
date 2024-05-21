@@ -4,11 +4,15 @@ using UnityEngine;
 
 public class PlayerCameraScript : MonoBehaviour
 {
-    [SerializeField] Vector2 mouseMovement;
+    [SerializeField] GameObject player;
+    [SerializeField] float followDist;
+    [SerializeField] float viewHeight;
+    Vector2 mouseMovement;
 
     void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
+        viewHeight /= 5;
     }
 
     void Update()
@@ -18,9 +22,14 @@ public class PlayerCameraScript : MonoBehaviour
         var rot = transform.rotation.eulerAngles;
 
         //X spins vertically, Y horizontally, and Z tilts the camera
-        rot.x -=mouseMovement.y;
-        rot.y +=mouseMovement.x;
+        rot.x -= mouseMovement.y;
+        rot.y += mouseMovement.x;
 
         transform.rotation = Quaternion.Euler(rot);
+
+        var displacement = new Vector3(Mathf.Cos(90-rot.y), viewHeight, Mathf.Sin(90-rot.y)) * followDist;
+
+
+        transform.position = player.transform.position + displacement;
     }
 }
