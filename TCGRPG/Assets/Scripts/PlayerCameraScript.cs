@@ -14,6 +14,7 @@ public class PlayerCameraScript : MonoBehaviour
     void Update()
     {
         mouseMovement = new Vector2(Input.GetAxis("Mouse X"), Input.GetAxis("Mouse Y"));
-        transform.Rotate(-mouseMovement.y, mouseMovement.x, 0f, Space.Self);
+        
+        transform.Rotate(-mouseMovement.y, mouseMovement.x, 0f); //X spins vertically, y horizontally, and z tilts the camera
     }
 }
