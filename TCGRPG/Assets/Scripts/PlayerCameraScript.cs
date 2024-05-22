@@ -27,19 +27,13 @@ public class PlayerCameraScript : MonoBehaviour
 
         transform.rotation = Quaternion.Euler(rot);
 
-        // while(rot.y > 90)
-        // {
-        //     rot.y -= 90;
-        // }
+        if(rot.y < 0)
+            rot.y = 360 + rot.y;
 
-        // while(rot.y < -90)
-        // {
-        //     rot.y +=90;
-        // }
+        Debug.Log(rot.y);
 
-        // var displacement = new Vector3(Mathf.Cos(90-rot.y), viewHeight, Mathf.Sin(90-rot.y)) * followDist;
+        var displacement = new Vector3(-Mathf.Cos((90-rot.y) * Mathf.Deg2Rad), viewHeight, -Mathf.Sin((90-rot.y) * Mathf.Deg2Rad)) * followDist;
 
-
-        // transform.position = player.transform.position + displacement;
+        transform.position = player.transform.position + displacement;
     }
 }
