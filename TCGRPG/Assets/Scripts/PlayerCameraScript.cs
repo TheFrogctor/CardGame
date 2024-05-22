@@ -30,7 +30,7 @@ public class PlayerCameraScript : MonoBehaviour
 
         Debug.Log(rot.y);
 
-        var displacement = new Vector3(Mathf.Cos(90-rot.y), viewHeight, Mathf.Sin(90-rot.y)) * followDist;
+        var displacement = new Vector3(-Mathf.Cos(90-rot.y), viewHeight, -Mathf.Sin(90-rot.y)) * followDist;
 
         Debug.Log(displacement);
         transform.position = player.transform.position + displacement;
