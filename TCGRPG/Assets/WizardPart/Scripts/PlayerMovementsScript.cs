@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerMovementsScript : MonoBehaviour
+public class PlayerMovementsScript : PlayerSystems
 {
 
     private Vector3 moveInput;
@@ -41,6 +41,8 @@ public class PlayerMovementsScript : MonoBehaviour
     void FixedUpdate()
     {
         Move();
+
+        Look();
     }
 
     private void Move()
@@ -54,5 +56,14 @@ public class PlayerMovementsScript : MonoBehaviour
     public void Shove(Vector3 force)
     {
         currentMovement += force;
+    }
+
+    private void Look()
+    {
+        var rot = transform.rotation.eulerAngles;
+
+        rot.y = playerID.yRotation;
+
+        transform.rotation = Quaternion.Euler(rot);
     }
 }
