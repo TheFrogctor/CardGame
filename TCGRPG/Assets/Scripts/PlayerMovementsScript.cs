@@ -30,8 +30,8 @@ public class PlayerMovementsScript : MonoBehaviour
 
     private void GetInput()
     {
-        moveInput.z = -Input.GetAxisRaw("Horizontal");
-        moveInput.x = Input.GetAxisRaw("Vertical");
+        moveInput.x = Input.GetAxisRaw("Horizontal");
+        moveInput.z = Input.GetAxisRaw("Vertical");
 
         moveInput.Normalize();
 
