@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 238642506ee60f84bb2c40f86793e387, type: 3}
   m_Name: Player1
   m_EditorClassIdentifier: 
-  yRotation: 0
+  yRotation: 343.25003

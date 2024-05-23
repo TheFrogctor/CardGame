@@ -35,7 +35,16 @@ public class PlayerMovementsScript : PlayerSystems
 
         moveInput.Normalize();
 
-        targetMovement = moveInput * moveSpeed;
+        // moveInput.x *=  Mathf.Cos(playerID.yRotation  * Mathf.Deg2Rad);
+        // moveInput.z *=  Mathf.Sin(playerID.yRotation  * Mathf.Deg2Rad);
+
+        var moveDirection = new Vector3();
+        moveDirection.x = moveInput.x * Mathf.Sin((playerID.yRotation + 90)  * Mathf.Deg2Rad) + moveInput.z * Mathf.Sin(playerID.yRotation  * Mathf.Deg2Rad);
+        moveDirection.z = moveInput.x * Mathf.Cos((playerID.yRotation + 90)  * Mathf.Deg2Rad) + moveInput.z * Mathf.Cos(playerID.yRotation  * Mathf.Deg2Rad);
+
+        moveDirection.Normalize();
+
+        targetMovement = moveDirection * moveSpeed;
     }
 
     void FixedUpdate()
@@ -60,10 +69,6 @@ public class PlayerMovementsScript : PlayerSystems
 
     private void Look()
     {
-        var rot = transform.rotation.eulerAngles;
-
-        rot.y = playerID.yRotation;
-
-        transform.rotation = Quaternion.Euler(rot);
+        
     }
 }
