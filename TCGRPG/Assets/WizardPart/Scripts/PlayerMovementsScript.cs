@@ -69,6 +69,11 @@ public class PlayerMovementsScript : PlayerSystems
 
     private void Look()
     {
-        
+        if(rb.velocity.sqrMagnitude > 0)
+        {
+            Quaternion targetRotation = Quaternion.Euler(0, Mathf.Atan2(rb.velocity.x, rb.velocity.z) * Mathf.Rad2Deg, 0);
+
+            transform.rotation = Quaternion.Lerp(transform.rotation, targetRotation, moveSpeed * Time.fixedDeltaTime);
+        }
     }
 }
